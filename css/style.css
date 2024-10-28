@@ -1,0 +1,768 @@
+                                        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+                                        * {
+                                            padding: 0;
+                                            margin: 0;
+                                            box-sizing: border-box;
+                                            text-decoration: none;
+                                            list-style: none;
+                                            font-family: "Josefin Sans", sans-serif;
+                                        }
+                                        
+                                         :root {
+                                            --main_color: #4b8cdc;
+                                            --p_color: #8a8a8a;
+                                            --bg_color: #1f1f1f;
+                                            --white_color: #fff;
+                                            --black_color: #070707;
+                                            --border_color: rgba(225, 225, 225, 0.1);
+                                        }
+                                        
+                                        body {
+                                            background: #1c1b1b;
+                                        }
+                                        
+                                        .container {
+                                            width: 80%;
+                                            margin: auto;
+                                            max-width: 1500px;
+                                        }
+                                        
+                                        section {
+                                            padding: 80px 0;
+                                        }
+                                        
+                                        img {
+                                            width: 300px;
+                                        }
+                                        
+                                        h1,
+                                        h2,
+                                        h3,
+                                        h4,
+                                        h5,
+                                        h5 {
+                                            color: var(--white_color);
+                                            font-family: "DM Sans", sans-serf;
+                                        }
+                                        
+                                        span {
+                                            color: var(--main_color);
+                                        }
+                                        
+                                        p {
+                                            color: var(--p_color);
+                                        }
+                                        
+                                        .btns {
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 20px;
+                                        }
+                                        
+                                        .btn {
+                                            background: var(--main_color);
+                                            padding: 14px 30px;
+                                            border-radius: 18px;
+                                            font-weight: 600;
+                                            text-transform: capitalize;
+                                            color: var(--black_color);
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .btn:hover {
+                                            scale: 1.1;
+                                        }
+                                        
+                                        .btn_no_bg {
+                                            color: var(--white_color);
+                                            text-transform: capitalize;
+                                            text-decoration: underline;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .btn_no_bg:hover {
+                                            color: var(--main_color);
+                                        }
+                                        
+                                        .top_section {
+                                            text-align: center;
+                                            margin-bottom: 100px;
+                                        }
+                                        
+                                        .top_section h2 {
+                                            font-size: 30px;
+                                        }
+                                        
+                                        header {
+                                            position: fixed;
+                                            top: 0;
+                                            left: 0;
+                                            right: 0;
+                                            height: 100px;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .add-bac {
+                                            background: #070707;
+                                            border-bottom: 2px solid #56565697;
+                                            z-index: 100;
+                                        }
+                                        
+                                        header nav {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            height: 100%;
+                                        }
+                                        
+                                        header nav .logo i {
+                                            font-size: 43px;
+                                            color: yellow;
+                                        }
+                                        
+                                        header nav .links {
+                                            display: flex;
+                                            gap: 20px;
+                                        }
+                                        
+                                        header nav .links a {
+                                            font-size: 17px;
+                                            background: transparent;
+                                            border: none;
+                                            padding: 1em 1.5em;
+                                            color: #ffedd3;
+                                            text-transform: uppercase;
+                                            position: relative;
+                                            transition: 0.5s ease;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        header nav .links a::before {
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            bottom: 0;
+                                            height: 2px;
+                                            width: 0;
+                                            background-color: #ffc506;
+                                            transition: 0.5s ease;
+                                        }
+                                        
+                                        header nav .links a:hover {
+                                            color: #1e1e2b;
+                                            transition-delay: 0.5s;
+                                        }
+                                        
+                                        header nav .links a:hover::before {
+                                            width: 100%;
+                                        }
+                                        
+                                        header nav .links a::after {
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            bottom: 0;
+                                            height: 0;
+                                            width: 100%;
+                                            background-color: #2b67c1;
+                                            transition: 0.4s ease;
+                                            z-index: -1;
+                                            border-radius: 10px;
+                                        }
+                                        
+                                        header nav .links a:hover::after {
+                                            height: 100%;
+                                            transition-delay: 0.4s;
+                                            color: aliceblue;
+                                        }
+                                        
+                                        header nav .icons {
+                                            display: flex;
+                                            gap: 30px;
+                                        }
+                                        
+                                        header nav .icons a {
+                                            color: var(--main_color);
+                                            font-size: 28px;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        header nav .icons a:hover {
+                                            scale: 1.4;
+                                        }
+                                        
+                                        .hero {
+                                            padding-top: 100px;
+                                            height: 100vh;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                        }
+                                        
+                                        .hero .container {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                        }
+                                        
+                                        .hero .div_text {
+                                            width: 50%;
+                                        }
+                                        
+                                        .hero .div_text h4 {
+                                            color: var(--p_color);
+                                            font-size: 35px;
+                                            margin-bottom: 15px;
+                                        }
+                                        
+                                        .hero .div_text h1 {
+                                            font-size: 70px;
+                                        }
+                                        
+                                        .hero .div_text h2 {
+                                            font-size: 70px;
+                                            font-weight: normal;
+                                        }
+                                        
+                                        .hero .div_text p {
+                                            margin: 30px 0;
+                                            font-size: 18px;
+                                            width: 80%;
+                                            line-height: 1.8;
+                                        }
+                                        
+                                        .hero .div_img {
+                                            width: 40%;
+                                            position: relative;
+                                        }
+                                        
+                                        .div_img .person {
+                                            border-radius: 50%;
+                                        }
+                                        
+                                        .div_img .bg_img {
+                                            width: 380px;
+                                        }
+                                        
+                                        .div_img .bg_img {
+                                            position: absolute;
+                                            bottom: 20px;
+                                            left: 0;
+                                            z-index: -1;
+                                        }
+                                        
+                                        .about {
+                                            margin-top: 50px;
+                                        }
+                                        
+                                        .about .container {
+                                            background: var(--black_color);
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            border-radius: 5px;
+                                            padding: 50px;
+                                        }
+                                        
+                                        .about .div_text {
+                                            width: 50%;
+                                        }
+                                        
+                                        .about .div_text h5 {
+                                            color: var(--p_color);
+                                            font-size: 18px;
+                                            text-transform: capitalize;
+                                        }
+                                        
+                                        .about .div_text h2 {
+                                            font-size: 45px;
+                                            margin: 25px 0;
+                                        }
+                                        
+                                        .about .div_text h4 {
+                                            font-size: 30px;
+                                            margin-bottom: 20px;
+                                        }
+                                        
+                                        .about .div_text p {
+                                            line-height: 1.8;
+                                        }
+                                        
+                                        .about .div_text ul {
+                                            font-size: 15px;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            color: var(--white_color);
+                                            margin: 30px 0 20px;
+                                        }
+                                        
+                                        .about .div_text ul li {
+                                            width: 45%;
+                                            font-weight: bold;
+                                            display: flex;
+                                            gap: 10px;
+                                            margin-bottom: 30px;
+                                        }
+                                        
+                                        .about .div_text ul li i {
+                                            color: red;
+                                        }
+                                        
+                                        .about .div_img {
+                                            width: 35%;
+                                        }
+                                        
+                                        .services .boxs {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            flex-wrap: wrap;
+                                        }
+                                        
+                                        .services .boxs .box {
+                                            width: 30%;
+                                            text-align: center;
+                                            padding: 50px 20px;
+                                            border: 1px solid white;
+                                            border-radius: 10px;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .services .boxs .box i {
+                                            color: aliceblue;
+                                            font-size: 70px;
+                                            margin-bottom: 30px;
+                                        }
+                                        
+                                        .services .boxs .box h3 {
+                                            font-size: 25px;
+                                            margin-bottom: 20px;
+                                        }
+                                        
+                                        .services .boxs .box p {
+                                            margin-bottom: 40px;
+                                            font-size: 14px;
+                                            line-height: 2.7;
+                                        }
+                                        
+                                        .services .boxs .box:hover {
+                                            border-color: chocolate;
+                                        }
+                                        
+                                        .services .boxs .box:hover i {
+                                            scale: 1.2;
+                                            color: blanchedalmond;
+                                        }
+                                        
+                                        .projects .project_box {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            margin-bottom: 40px;
+                                        }
+                                        
+                                        .projects .project_box img {
+                                            width: 45%;
+                                        }
+                                        
+                                        .projects .project_box .text {
+                                            margin-left: 100px;
+                                            width: calc(50% - 100px);
+                                        }
+                                        
+                                        .projects .project_box .text h4 {
+                                            font-size: 20px;
+                                            margin-bottom: 20px;
+                                            font-weight: normal;
+                                        }
+                                        
+                                        .projects .project_box .text h3 {
+                                            font-size: 40px;
+                                            color: var(--white_color);
+                                            transition: 0.5s;
+                                        }
+                                        
+                                        .projects .project_box .text h3 a:hover {
+                                            color: var(--main_color);
+                                        }
+                                        
+                                        .projects .project_box .text p {
+                                            margin: 30px 0 50px;
+                                            line-height: 1.8;
+                                        }
+                                        
+                                        .projects .project_box .text .link {
+                                            display: block;
+                                            width: 50px;
+                                            height: 50px;
+                                            border: 1px solid var(--border_color);
+                                            color: var(--black_color);
+                                            font-size: 20px;
+                                            background: var(--main_color);
+                                            text-align: center;
+                                            line-height: 50px;
+                                            border: red solid 2px;
+                                            border-radius: 50%;
+                                            rotate: 180deg;
+                                            transition: 1.3s;
+                                        }
+                                        
+                                        .projects .project_box .text .link:hover {
+                                            scale: 1.1;
+                                        }
+                                        
+                                        .contact .container {
+                                            display: flex;
+                                            justify-content: space-between;
+                                        }
+                                        
+                                        .contact .top_section {
+                                            margin-bottom: 80px;
+                                        }
+                                        
+                                        .contact .social_contact {
+                                            width: 30%;
+                                        }
+                                        
+                                        .contact .social_contact h2 {
+                                            color: var(--white_color);
+                                            margin-bottom: 40px;
+                                        }
+                                        
+                                        .contact .social_contact .links {
+                                            display: flex;
+                                            flex-direction: column;
+                                            width: 100%;
+                                        }
+                                        
+                                        .contact .social_contact .links a {
+                                            color: var(--white_color);
+                                            font-size: 28px;
+                                            margin-bottom: 25px;
+                                            position: relative;
+                                            left: 0px;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .contact .social_contact .links a i {
+                                            color: var(--bg_color);
+                                            margin-right: 5px;
+                                            width: 45px;
+                                            height: 45px;
+                                            background: var(--main_color);
+                                            text-align: center;
+                                            line-height: 50px;
+                                            border-radius: 6px;
+                                        }
+                                        
+                                        .contact .social_contact .links a:hover {
+                                            left: 15px;
+                                        }
+                                        
+                                        .contact form {
+                                            width: 60%;
+                                            text-align: center;
+                                        }
+                                        
+                                        .contact form .inpts_form {
+                                            width: 100%;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            justify-content: space-between;
+                                        }
+                                        
+                                        .contact form .inpts_form input,
+                                        .contact form .inpts_form textarea {
+                                            border-radius: 5px;
+                                            padding: 20px;
+                                            outline: none;
+                                            background-color: var(--bg_color);
+                                            color: white;
+                                            margin-bottom: 30px;
+                                            border: 1px solid var(--border_color);
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .contact form .inpts_form input {
+                                            width: 50%;
+                                        }
+                                        
+                                        .contact form .inpts_form textarea {
+                                            width: 100%;
+                                        }
+                                        
+                                        .contact form .inpts_form textarea:focus {
+                                            border-color: chartreuse;
+                                        }
+                                        
+                                        .contact form .inpts_form input:focus {
+                                            border-color: chartreuse;
+                                        }
+                                        
+                                        .contact .btn {
+                                            outline: none;
+                                            padding: 15px 35px;
+                                            font-size: 20px;
+                                            cursor: pointer;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .contact .btn:hover {
+                                            scale: 1.1;
+                                        }
+                                        
+                                        .close_menu,
+                                        header .links .logo,
+                                        .icon_menu {
+                                            display: none;
+                                        }
+                                        
+                                        @media (max-width:1258px) {
+                                            .container {
+                                                width: 90%;
+                                            }
+                                        }
+                                        
+                                        @media (max-width:1000px) {
+                                            header nav .links {
+                                                position: fixed;
+                                                top: 0;
+                                                flex-direction: column;
+                                                width: 400px;
+                                                background-color: black;
+                                                left: -400px;
+                                                padding: 50px 0;
+                                                height: 100%;
+                                                border-right: 2px solid var(--border_color);
+                                                text-align: center;
+                                                transition: 0.2s;
+                                            }
+                                            header nav .links.active {
+                                                left: 0;
+                                            }
+                                            .close_menu {
+                                                display: block;
+                                                font-size: 29px;
+                                                position: absolute;
+                                                top: 30px;
+                                                right: 30px;
+                                                color: #fff;
+                                                cursor: pointer;
+                                            }
+                                            header .links .logo {
+                                                display: block;
+                                                position: absolute;
+                                                top: 30px;
+                                                left: 30px;
+                                            }
+                                            .icon_menu {
+                                                display: block;
+                                                font-size: 28px;
+                                            }
+                                            .hero .div_text h4 {
+                                                font-size: 25px;
+                                            }
+                                            .hero .div_text h1 {
+                                                font-size: 55px;
+                                            }
+                                            .hero .div_text h2 {
+                                                font-size: 55px;
+                                            }
+                                            .hero .div_text p {
+                                                font-size: 16px;
+                                                margin: 30px auto;
+                                            }
+                                            .hero .btn {
+                                                font-size: 18px;
+                                                padding: 16px 40px;
+                                            }
+                                            .hero .container {
+                                                display: flex;
+                                                flex-direction: column;
+                                            }
+                                            .hero .div_text {
+                                                width: 100%;
+                                                margin-bottom: 30px;
+                                                text-align: center;
+                                            }
+                                            .hero {
+                                                height: auto;
+                                            }
+                                            .about .container {
+                                                display: flex;
+                                                flex-direction: column;
+                                            }
+                                            .about .div_text {
+                                                width: 100%;
+                                                margin-bottom: 50px;
+                                            }
+                                            .about .div_img {
+                                                width: 45%;
+                                            }
+                                            .div_img .bg_img {
+                                                bottom: 10px;
+                                                left: 0;
+                                                width: 340px;
+                                            }
+                                            .services .boxs .box {
+                                                width: 47%;
+                                                margin-bottom: 30px;
+                                            }
+                                            .projects .project_box.text h3 a {
+                                                font-size: 28px;
+                                            }
+                                            .projects .project_box.text h4 {
+                                                font-size: 16px;
+                                            }
+                                            .projects .project_box.text p {
+                                                font-size: 14px;
+                                            }
+                                            .projects .project_box.text {
+                                                width: (50% - 50px);
+                                                margin-left: 50px;
+                                            }
+                                            .contact .container {
+                                                display: flex;
+                                                flex-direction: column;
+                                            }
+                                            .contact .social_contact {
+                                                width: 100%;
+                                                margin-bottom: 30px;
+                                            }
+                                            .contact .social_contact .links {
+                                                flex-direction: row;
+                                                flex-wrap: wrap;
+                                            }
+                                            .contact .social_contact .links a {
+                                                width: 50%;
+                                                font-size: 16px;
+                                            }
+                                            .contact .social_contact .links a i {
+                                                width: 35px;
+                                                height: 35px;
+                                                line-height: 35px;
+                                            }
+                                            .contact form {
+                                                width: 80%;
+                                                margin: 0 auto;
+                                            }
+                                            .contact .btn {
+                                                font-size: 16px;
+                                                padding: 13px 28px;
+                                            }
+                                        }
+                                        
+                                        @media (max-width:500px) {
+                                            .btn {
+                                                padding: 12px 24px;
+                                                font-size: 13px;
+                                            }
+                                            header nav .icons a {
+                                                font-size: 19px;
+                                            }
+                                            header nav .icons {
+                                                gap: 20px;
+                                                align-items: center;
+                                            }
+                                            header nav .links {
+                                                width: 100%;
+                                                left: -100%;
+                                            }
+                                            .icon_menu {
+                                                margin-left: 10px;
+                                            }
+                                            /*hero*/
+                                            .hero .div_text {
+                                                text-align: center;
+                                            }
+                                            .hero .div_text h4 {
+                                                font-size: 21px;
+                                            }
+                                            .hero .div_text h1 {
+                                                font-size: 40px;
+                                            }
+                                            .hero .div_text h2 {
+                                                font-size: 40px;
+                                            }
+                                            .hero .div_text p {
+                                                font-size: 13px;
+                                                margin: 23px auto;
+                                                width: 100%;
+                                            }
+                                            .hero .btn {
+                                                font-size: 15px;
+                                                padding: 13px 28px;
+                                            }
+                                            .hero .div_img {
+                                                width: 75%;
+                                            }
+                                            .container {
+                                                width: 100%;
+                                            }
+                                            .about .div_text h2 {
+                                                font-size: 25px;
+                                            }
+                                            .about .div_text h4 {
+                                                font-size: 18px;
+                                            }
+                                            .about .div_text p {
+                                                font-size: 13px;
+                                                width: 100%;
+                                            }
+                                            .about .div_text ul li {
+                                                width: 100%;
+                                                font-size: 14px;
+                                            }
+                                            .about .div_img {
+                                                width: 75%;
+                                            }
+                                            .top_section h2 {
+                                                font-size: 20px;
+                                            }
+                                            .services .boxs .box {
+                                                width: 100%;
+                                            }
+                                            .services .boxs .box i {
+                                                font-size: 50px;
+                                            }
+                                            .projects .project_box {
+                                                flex-direction: column;
+                                            }
+                                            .projects .project_box img {
+                                                width: 95%;
+                                                margin-bottom: 20px;
+                                            }
+                                            .projects .project_box .text {
+                                                width: 100%;
+                                                margin-left: 5px;
+                                            }
+                                            .projects .project_box .text p {
+                                                margin: 10px 0 30px;
+                                            }
+                                            .projects .project_box .text h3 a {
+                                                font-size: 32px;
+                                            }
+                                            .contact .social_contact .links {
+                                                flex-direction: column
+                                            }
+                                            .contact .social_contact .links a {
+                                                width: 100%;
+                                            }
+                                            .projects {
+                                                padding-bottom: 5px;
+                                            }
+                                            .contact {
+                                                padding-top: 0;
+                                            }
+                                            .contact .top_section {
+                                                margin-bottom: 10px;
+                                            }
+                                            .contact form {
+                                                width: 100%;
+                                            }
+                                            .contact form .inpts_form input {
+                                                width: 90%;
+                                                padding: 10px 20px;
+                                                margin-bottom: 14px;
+                                            }
+                                        }
